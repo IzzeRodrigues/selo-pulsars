@@ -3,7 +3,7 @@ import { Link, useParams } from 'react-router'
 import { supabase } from '../services/supabaseClient'
 import { formatarData, listarBandas, parseData, type Evento } from '../utils/eventos'
 
-const MEU_WHATSAPP = '5513981002799'
+const MEU_WHATSAPP = '551398100279'
 const MINHA_CHAVE_PIX = 'selopulsars@gmail.com'
 const STATUS_INICIAL = 'Pendente'
 
@@ -252,7 +252,7 @@ function EventPage() {
 
                     <div>
                       <label htmlFor="telefone" className="text-xs font-black uppercase tracking-widest">
-                        Telefone (WhatsApp)
+                        Telefone ou Insta pra contato
                       </label>
                       <input
                         id="telefone"
@@ -261,7 +261,7 @@ function EventPage() {
                         inputMode="numeric"
                         autoComplete="tel-national"
                         className={inputClasse}
-                        placeholder="(13) 99999-9999"
+                        placeholder="(13) 99999-9999 ou @_fulano"
                         value={telefone}
                         onChange={(e) => setTelefone(mascararTelefone(e.target.value))}
                         required
